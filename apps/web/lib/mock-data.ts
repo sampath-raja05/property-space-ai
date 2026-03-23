@@ -1,0 +1,43 @@
+import { PropertyListing } from "@/lib/types";
+
+export const sampleProperties: PropertyListing[] = [
+  {
+    id: "pune-1",
+    title: "2 BHK Near IT Park",
+    city: "Pune",
+    locality: "Hinjewadi",
+    priceInr: 7800000,
+    bhk: 2,
+    type: "Apartment",
+    areaSqft: 980,
+    lat: 18.5912,
+    lng: 73.7389,
+    investmentScore: 83,
+  },
+  {
+    id: "blr-1",
+    title: "3 BHK Premium Tower",
+    city: "Bengaluru",
+    locality: "Whitefield",
+    priceInr: 14500000,
+    bhk: 3,
+    type: "Apartment",
+    areaSqft: 1560,
+    lat: 12.9698,
+    lng: 77.7499,
+    investmentScore: 88,
+  },
+  {
+    id: "indore-1",
+    title: "Residential Plot",
+    city: "Indore",
+    locality: "Super Corridor",
+    priceInr: 4200000,
+    bhk: 0,
+    type: "Plot",
+    areaSqft: 1200,
+    lat: 22.7522,
+    lng: 75.906,
+    investmentScore: 76,
+  },
+];

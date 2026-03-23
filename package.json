@@ -1,0 +1,14 @@
+{
+  "name": "property-space-ai",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/web",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @property-space/web",
+    "build:web": "npm run build --workspace @property-space/web",
+    "lint:web": "npm run lint --workspace @property-space/web"
+  }
+}
