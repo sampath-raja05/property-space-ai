@@ -2,7 +2,6 @@
 
 import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import MarkerClusterGroup from "react-leaflet-cluster";
 import { usePropertyStore } from "@/lib/store";
 
 export default function MapView() {
@@ -15,17 +14,15 @@ export default function MapView() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <MarkerClusterGroup chunkedLoading>
-          {listings.map((item) => (
-            <Marker position={[item.lat, item.lng]} key={item.id}>
-              <Popup>
-                <strong>{item.title}</strong>
-                <br />
-                {item.city}
-              </Popup>
-            </Marker>
-          ))}
-        </MarkerClusterGroup>
+        {listings.map((item) => (
+          <Marker position={[item.lat, item.lng]} key={item.id}>
+            <Popup>
+              <strong>{item.title}</strong>
+              <br />
+              {item.city}
+            </Popup>
+          </Marker>
+        ))}
       </MapContainer>
     </div>
   );

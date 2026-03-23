@@ -1,10 +1,8 @@
-import dynamic from "next/dynamic";
 import ChatAssistant from "@/components/chat-assistant";
+import MapWrapper from "@/components/map-wrapper";
 import PropertyFilter from "@/components/property-filter";
 import PropertyGrid from "@/components/property-grid";
 import ReportExport from "@/components/report-export";
-
-const MapView = dynamic(() => import("@/components/map-view"), { ssr: false });
 
 export default function HomePage() {
   return (
@@ -20,7 +18,7 @@ export default function HomePage() {
       <div className="flex justify-end">
         <ReportExport />
       </div>
-      <MapView />
+      <MapWrapper />
       <PropertyGrid />
       <ChatAssistant />
     </main>

@@ -3,7 +3,7 @@
 import { usePropertyStore } from "@/lib/store";
 
 export default function PropertyFilter() {
-  const { city, setCity, setPriceRange, setBhk, setPropertyType, togglePolygonMode, bhk, polygonMode } =
+  const { city, setCity, setPriceRange, setBhk, setPropertyType, togglePolygonMode, bhk, polygonMode, propertyType } =
     usePropertyStore();
 
   return (
@@ -34,9 +34,9 @@ export default function PropertyFilter() {
           <option value="3">3 BHK</option>
         </select>
         <select
+          value={propertyType}
           onChange={(e) => setPropertyType((e.target.value as "Apartment" | "Villa" | "Plot" | "Commercial") || "")}
           className="rounded-md border border-slate-300 bg-white/80 p-2 text-sm text-slate-800"
-          defaultValue=""
         >
           <option value="">Any Type</option>
           <option value="Apartment">Apartment</option>
